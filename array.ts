@@ -1,6 +1,6 @@
 
 //Array Numericos
-const array: Array<number> = [1, 2, 3, 4]
+// const array: Array<number> = [1, 2, 3, 4]
 
 //Array Strings
 
