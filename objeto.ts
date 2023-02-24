@@ -8,7 +8,7 @@ interface Pessoa {
 
 
 
-const pessoa:Pessoa = {
+const pessoa: Pessoa = {
     nome: 'Fulano',
     idade: 40,
 }
