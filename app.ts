@@ -1,4 +1,4 @@
-//Criando um Baking
+//Criando um Banking
 
 //Nome, AccountNumber
 
@@ -14,14 +14,23 @@ class Account {
         this.name = name
         this.accountNumber = accountNumber
     }
+
+    // criando as funções
+
+    deposit = () => {
+        console.log('Voce Depositou R$'  )
+    }
+
+    withdraw = () => {
+        console.log('Você sacou R$')
+    }
 }
 
-// criando as funções
+const newAccount : Account =  new Account('Fulano', 1)
 
-deposit = () => {
-    console.log('Voce Depositou R$')
-}
+console.log(newAccount)
 
-withdraw = () => {
-    console.log('Você sacou R$')
-}
+const account: Account = new Account('João', 20)
+
+account.deposit() 
+ 
