@@ -27,10 +27,10 @@ class Account {
 }
 
 const newAccount : Account =  new Account('Fulano', 1)
-
 console.log(newAccount)
 
-const account: Account = new Account('João', 20)
 
+
+const account: Account = new Account('João', 20)
 account.deposit() 
  
