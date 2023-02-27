@@ -1,7 +1,27 @@
-const soma = (a: number, b: number) => {
-    console.log(a + b)
+//Criando um Baking
+
+//Nome, AccountNumber
+
+//Depositar, Sacar
+
+//criando a class
+
+class Account {
+    name: string | undefined
+    accountNumber: number | undefined
+
+    constructor(name: string, accountNumber: number) {
+        this.name = name
+        this.accountNumber = accountNumber
+    }
 }
 
-soma(5 , 9)
+// criando as funções
 
-soma(10, 50)
+deposit = () => {
+    console.log('Voce Depositou R$')
+}
+
+withdraw = () => {
+    console.log('Você sacou R$')
+}
