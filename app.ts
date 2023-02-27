@@ -6,31 +6,57 @@
 
 //criando a class
 
-class Account {
-    name: string | undefined
-    accountNumber: number | undefined
+abstract class Account {
+    name: string
+    accountNumber: number
+    balance: number = 0
 
     constructor(name: string, accountNumber: number) {
         this.name = name
         this.accountNumber = accountNumber
     }
 
-    // criando as funções
-
     deposit = () => {
-        console.log('Voce Depositou R$'  )
+        console.log('Voce Depositou R$: X')
     }
-
     withdraw = () => {
-        console.log('Você sacou R$')
+        console.log('Voce Sacou R$: Y')
+    }
+    getBalance = () => {
+        console.log(this.balance)
     }
 }
 
-const newAccount : Account =  new Account('Fulano', 1)
-console.log(newAccount)
+
+class PeopleAccount extends Account {
+    doc_id: number
+
+    constructor(doc_id: number, name: string, accountNumber: number) {
+        super(name, accountNumber)
+        this.doc_id = doc_id
+    }
+}
+class CompanyAccount extends Account {
+
+    constructor(name: string, accountNumber: number) {
+        super(name, accountNumber)
+    }
+
+    getLoan = () => {
+        console.log('Voce pegou um empréstimo')
+    }
+
+}
+const peopleAccount: PeopleAccount = new PeopleAccount(1, 'Mar', 10)
+console.log(peopleAccount)
+
+const companuAccount: CompanyAccount = new CompanyAccount('Dio', 20)
+console.log(companuAccount)
 
 
+// const adminAccount: Account = new Account('Marcelo', 2)
+// console.log(adminAccount)
 
-const account: Account = new Account('João', 20)
-account.deposit() 
- 
+// const account: Account = new Account('João', 12)
+// console.log(account)
+
